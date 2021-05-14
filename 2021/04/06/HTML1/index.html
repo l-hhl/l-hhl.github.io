@@ -1,0 +1,392 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="1.HTML语法规范1.1 基本语法概述1.HTML标签是由尖括号包围的关键词，例如&amp;lt;HTML&amp;gt;     
+2.HTML标签通常是成对出现的，例如&amp;lt;HTML&amp;gt;    &amp;lt;HTML&amp;gt;  
+3.有些特殊的标签必须是单个标签，（极少情况），例如&amp;lt;br /&amp;gt;  ">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="blog" title="blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="blog">blog</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//baidu.com/s" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="wd" autocomplete="off" maxlength="20" placeholder="Search" />
+                        <input name=tn type=hidden value="bds">
+                        <input name=cl type=hidden value="3">
+                        <input name=ct type=hidden value="2097152">
+						<input type="hidden" name="si" value="example.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2021/04/06/HTML1/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://example.com" title="John Doe">John Doe</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2021-04-06T15:10:29.103Z" itemprop="datePublished">2021-04-06</time>
+    
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-HTML%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">1.HTML语法规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 基本语法概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E6%A0%87%E7%AD%BE%E5%85%B3%E7%B3%BB"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 标签关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">包含关系：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%88%97%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">并列关系：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-HTML%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="toc-number">2.</span> <span class="toc-text">2.HTML基本结构标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 一个标签</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%BB%A5VSCode%E4%B8%BA%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">3.网页开发工具，以VSCode为例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%A0%87%E7%AD%BE%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">3.1.文档类型声明标签：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-lang%E8%AF%AD%E8%A8%80%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 lang语言标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 字符集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%B3%A8%E6%84%8F"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">4.</span> <span class="toc-text">4.HTML常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%A0%87%E7%AD%BE%E8%AF%AD%E4%B9%89"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 标签语义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE%E5%92%8C%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.</span> <span class="toc-text">4.3段落标签和换行标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.0.1.</span> <span class="toc-text">段落标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.0.2.</span> <span class="toc-text">换行标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E6%9C%AC%E6%96%87%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">4.3.</span> <span class="toc-text">4.4本文格式化标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-LT-div-gt-%E5%92%8C-LT-span-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">4.4.</span> <span class="toc-text">4.5 &amp;LT;div&gt;和&amp;LT;span&gt;标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE%EF%BC%8C%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.</span> <span class="toc-text">4.6图像标签，路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="toc-number">4.5.1.</span> <span class="toc-text">1.图像标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.</span> <span class="toc-text">2.路径</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.1.</span> <span class="toc-text">相对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.2.</span> <span class="toc-text">绝对路径</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE%EF%BC%81"><span class="toc-number">4.6.</span> <span class="toc-text">4.7 超链接标签！</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">4.6.0.1.</span> <span class="toc-text">超链接的语法规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.6.0.2.</span> <span class="toc-text">链接语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E5%88%86%E7%B1%BB"><span class="toc-number">4.6.0.3.</span> <span class="toc-text">链接分类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-HTML%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">5.</span> <span class="toc-text">5.HTML中的特殊标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E6%B3%A8%E9%87%8A"><span class="toc-number">5.1.</span> <span class="toc-text">5.1注释</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1.HTML语法规范"></a>1.HTML语法规范</h1><h2 id="1-1-基本语法概述"><a href="#1-1-基本语法概述" class="headerlink" title="1.1 基本语法概述"></a>1.1 基本语法概述</h2><p>1.HTML标签是由尖括号包围的关键词，例如&lt;HTML&gt;     </p>
+<p>2.HTML标签通常是<strong>成对出现的</strong>，例如&lt;HTML&gt;    &lt;HTML&gt;  </p>
+<p>3.有些特殊的标签必须是单个标签，（极少情况），例如&lt;br /&gt;  </p>
+<h2 id="1-2-标签关系"><a href="#1-2-标签关系" class="headerlink" title="1.2 标签关系"></a>1.2 标签关系</h2><p>双标签关系可以分为两类：包含关系和并列关系  </p>
+<h3 id="包含关系："><a href="#包含关系：" class="headerlink" title="包含关系："></a>包含关系：</h3><p>&lt;head&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;   &lt;tltle&gt;&lt;/title&gt;<br>&lt;/head&gt;    </p>
+<h3 id="并列关系："><a href="#并列关系：" class="headerlink" title="并列关系："></a>并列关系：</h3><p>&lt;head&gt;&lt;/head&gt;<br>&lt;body&gt; &lt;/body&gt;   </p>
+<h1 id="2-HTML基本结构标签"><a href="#2-HTML基本结构标签" class="headerlink" title="2.HTML基本结构标签"></a>2.HTML基本结构标签</h1><h2 id="2-1-一个标签"><a href="#2-1-一个标签" class="headerlink" title="2.1 一个标签"></a>2.1 一个标签</h2><p>每个页面都会有一个基本的结构标签，同时也成为骨架标签，页面的内容也是在这些基本标签上书写，HTML页面也称为HTML文档。  </p>
+<p>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;        &lt;title&gt;XXXXXX&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/head&gt;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</p>
+<pre><code>        xxxxxxx  </code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</p>
+<p>&lt;/html&gt;  </p>
+<p>&lt;html&gt;&lt;/html&gt;:HTML标签，页面中最大的标签，称为根标签</p>
+<p>&lt;head&gt;&lt;/head&gt;:文档的头部，注意在head标签中我们必须设置的标签是title</p>
+<p>&lt;title&gt;&lt;/title&gt;:文档的标题，即网页标题</p>
+<p>&lt;body&gt;&lt;/body&gt;:文档的主体，元素包含的所有内容，页面内容，基本上都是放在body里面的</p>
+<h1 id="3-网页开发工具，以VSCode为例"><a href="#3-网页开发工具，以VSCode为例" class="headerlink" title="3.网页开发工具，以VSCode为例"></a>3.网页开发工具，以VSCode为例</h1><p><font face="黑体" size=5>生成骨架标签新增代码 </font>  </p>
+<h2 id="3-1-文档类型声明标签："><a href="#3-1-文档类型声明标签：" class="headerlink" title="3.1.文档类型声明标签："></a>3.1.文档类型声明标签：</h2><!DOCTYPE><p>文档类型声明，作用就是告诉浏览器用哪种HTML版本来显示网页 。</p>
+<!DOCTYPE html><p>：即采用HTML5版本来显示网页。</p>
+<p>必须位于首位，它不是一个HTML标签，它就是文档类型声明标签</p>
+<h2 id="3-2-lang语言标签"><a href="#3-2-lang语言标签" class="headerlink" title="3.2 lang语言标签"></a>3.2 lang语言标签</h2><p>用来定义当前文档显示的语言。  </p>
+<p>1.en定义为语言英文<br>2.zh-CN定义语言为中文<br>3.对于文档显示来说，定义成en的文档也可以显示中文，定义为zh-CN的文档也可以显示英文<br>4.&lt;html lang=”en”&gt;<br>5.语言种类有多种  </p>
+<h2 id="3-3-字符集"><a href="#3-3-字符集" class="headerlink" title="3.3 字符集"></a>3.3 字符集</h2><p>字符集（Character set）是多个字符的集合，以便计算机能够识别和存储各种文字<br>在&lt;head&gt;标签<strong>内</strong>，可以通过<meta>标签的charset属性来规定HTML文档用哪种字符编码  </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=”UTF-8/“&gt;  </p>
+<p>charset常用的值有：GB2312,BLG5,GBK,UTF-8, 其中UTF-8也被成为万国码，基本包含了全世界所有国家需要的字符,防止出现乱码的情况。</p>
+<p>&lt;meta charset=”UTF-8”&gt;</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+
+<h2 id="3-4-注意"><a href="#3-4-注意" class="headerlink" title="3.4 注意"></a>3.4 注意</h2><p>以上内容在VScode会自动生成。</p>
+<h1 id="4-HTML常用标签"><a href="#4-HTML常用标签" class="headerlink" title="4.HTML常用标签"></a>4.HTML常用标签</h1><h2 id="4-1-标签语义"><a href="#4-1-标签语义" class="headerlink" title="4.1 标签语义"></a>4.1 标签语义</h2><p><font size = 5>简单理解就是，标签是用来做什么的<br>在合适的地方放一个合理的标签，可以让页面结构更加清晰</font></p>
+<p>##4.2 标题标签</p>
+<p>HTML提供了六个等级的网页标签，即&lt;h1&gt;到&lt;h6&gt;  </p>
+<p><font size = 5>&lt;h1&gt;一级标题&lt;/h1&gt;</font></p>
+<p>语义：作为标签使用，且重要性依次递减.  </p>
+<p>特点：加了标题的文字会加粗，<strong>且一个标题独占一行</strong>。<br>放入body中。</p>
+<h2 id="4-3段落标签和换行标签"><a href="#4-3段落标签和换行标签" class="headerlink" title="4.3段落标签和换行标签"></a>4.3段落标签和换行标签</h2><h4 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h4><p>标签格式：&lt;p&gt; 我是一个段落标签 &lt;/p&gt;</p>
+<p>语义：把HTML文档分为若干段落。</p>
+<p>如果没有分段标签，在浏览器中，不管文字中怎么排列，文字都是紧紧连在一起的。多少个空格也仅显示一个空格的效果。</p>
+<p>对于 HTML，您无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。</p>
+<p>当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
+<p>特点：<br>1.文本在一个段落中会根据浏览器的大小自动换行。<br>     2.段落和段落之间保有一行空隙。</p>
+<h4 id="换行标签"><a href="#换行标签" class="headerlink" title="换行标签"></a>换行标签</h4><p>在HTML中，一个段落中的文字会从左到右依次排列，直到浏览器的右端，然后才自动换行，如果希望某段文本强制换行显示，需要使用换行标签，即<br>  &lt;br /&gt;,注意其为单标签。<br>而且 换行标签只是简单的新开始一行，跟段落不一样，段落之间会插入一些垂直的间距。  </p>
+<p>&lt;br&gt;, &lt;br/&gt; 以及 &lt;br /&gt;（带有空格）  </p>
+<p>&lt;br&gt; 是 HTML 写法。<br>是 XHTML1.1 的写法, 也是 XML 写法。&lt;br/&gt; 是 XHTML 为兼容 HTML 的写法,也是 XML 写法。HTML5 因为兼容 XHTML，所以三种写法都可以使用。</p>
+<h2 id="4-4本文格式化标签"><a href="#4-4本文格式化标签" class="headerlink" title="4.4本文格式化标签"></a>4.4本文格式化标签</h2><p>在网页中，有时需要为文字设置粗体，斜线，或下划线等效果，这时就需要HTML中的文本格式化标签，使文字以特殊的方式显示。  </p>
+<p>标签语义：突出重要性，比普通文字更重要   </p>
+<p><img src="https://img-blog.csdnimg.cn/20191021234602688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzUxMDMz,size_16,color_FFFFFF,t_70" alt="avatar">  </p>
+<p>注：</p>
+<p>strong 标签和 b 标签的加粗效果是一样的，不过在实际开发中，如果想让文本实现加粗效果，尽量使用 strong 标签，而不是使用 b 标签，这是因为 strong 标签比 b 标签更具有语义性。  </p>
+<p>尽量使用 em 标签来实现文本的斜体效果，因为 em 标签比 i 标签和 cite 标签的语义性更好。</p>
+<p>推荐使用 del 标签来实现对文本添加中划线，原因同以上。</p>
+<p>&lt;!– 这是一个注释 –&gt; HTML代码中的注释。</p>
+<h2 id="4-5-LT-div-gt-和-LT-span-gt-标签"><a href="#4-5-LT-div-gt-和-LT-span-gt-标签" class="headerlink" title="4.5 &LT;div&gt;和&LT;span&gt;标签"></a>4.5 &LT;div&gt;和&LT;span&gt;标签</h2><p>注意，以上两个标签是没有语义的。</p>
+<p>特点：&lt;div&gt;标签用来布局，但是div独占一行，span不会占用一行，内容占多大宽度，span就有多宽。 </p>
+<h2 id="4-6图像标签，路径"><a href="#4-6图像标签，路径" class="headerlink" title="4.6图像标签，路径"></a>4.6图像标签，路径</h2><h3 id="1-图像标签"><a href="#1-图像标签" class="headerlink" title="1.图像标签"></a>1.图像标签</h3><p>在HMTL标签中，&lt;img&gt;标签用于定义HTML页面中的图像。</p>
+<p>&lt;img src=”图像URL”/&gt;，src是该标签的必须属性，他用于指定图像文件中的路径和文件名。</p>
+<p>要插入图片的图片必须和网页文件放到一起。  </p>
+<p>在编写HTML文件时，需要添加图片时，标准语法是：&lt;img src = “图像URL（图像的文件路径和文件名）” /&gt; <img /><br>主要标记属性：<br>1.alt 图片添加alt属性时，如果添加的图片能够正常显示，则不会显示出效果，但是如果添加的图片因为某种原因而无法显示，则会将无法显示的图片替换成文字</p>
+<p>2.title 鼠标箭头悬停在图片上时，将会显示出来的文字</p>
+<p>3.width 调整图片的宽度属性</p>
+<p>4.height 调整图片的高度属性</p>
+<p>需要注意一点，在进行图片修改的时候，我们其实只需要修改图片的width或者height一项即可，因为修改其任意一个，高度和宽度都会等比例缩放。</p>
+<p>5.border 设置图像的边框颜色，在css中使用较多，HTML中使用较少。</p>
+<p>6.img 是个单标签</p>
+<p>7.属性之间不分顺序，要以空格分隔。</p>
+<p>8.采用的是键值对的格式。  </p>
+<h3 id="2-路径"><a href="#2-路径" class="headerlink" title="2.路径"></a>2.路径</h3><p>目录文件夹与根目录</p>
+<p>目录文件夹：就是一个普通文件夹，只不过里面存放了做网页需要的相关的素材。</p>
+<p>根目录：打开目录文件夹的第一层就是根目录。</p>
+<p>可嵌套</p>
+<p>路径可分为：<br>1.相对路径<br>2.绝对路径</p>
+<h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>即以引用文件所在位置为参考基础，而建立出的目录路径。简单理解，图片相对于HTML页面的位置。</p>
+<p>&lt;img src=”picture.jpg”&gt; :picture.jpg 位于与当前网页相同的文件夹   </p>
+<p>&lt;img src=”images/picture.jpg”&gt; : picture.jpg 位于当前文件夹的 images 文件夹中   </p>
+<p>&lt;img src=”../picture.jpg”&gt; :picture.jpg 位于当前文件夹的上一级文件夹中   </p>
+<p>&lt;img src=”/images/picture.jpg”&gt; :picture.jpg 当前站点根目录的 images 文件夹中  </p>
+<p>出现多层文件夹依次类推  </p>
+<h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>绝对路径：是指目录下的绝对位置，直接到达目标位置的，通常是从盘符开始的路径。  有时也是完整的网络地址。只要能上网，就能拿到图片。  </p>
+<p>注意：相对路径和绝对路径的/和\的不同。  </p>
+<h2 id="4-7-超链接标签！"><a href="#4-7-超链接标签！" class="headerlink" title="4.7 超链接标签！"></a>4.7 超链接标签！</h2><p>在HTML标签中，&lt;a&gt;标签用于定义超链接，作用是从一个页面链接到另一个页面。</p>
+<h4 id="超链接的语法规范"><a href="#超链接的语法规范" class="headerlink" title="超链接的语法规范"></a>超链接的语法规范</h4><h4 id="链接语法格式"><a href="#链接语法格式" class="headerlink" title="链接语法格式"></a>链接语法格式</h4><p><strong>&lt;a href=”跳转目标” target=”目标窗口的弹出方式”&gt;文本或图像&lt;/a&gt;</strong> </p>
+<p>a是anchor的缩写，意为：锚。</p>
+<p>href属性：用于指定链接目标的URL地址，    其为必须地址，当标签应用href属性时，它就具有超链接功能。  </p>
+<p>target属性：用于指定链接页面的打开方式，其中_self为默认值，在当前窗口打开，_blank为在新窗口中打开方式。   </p>
+<p>web链接必须以http开头。</p>
+<h4 id="链接分类"><a href="#链接分类" class="headerlink" title="链接分类"></a>链接分类</h4><p>1.外部链接</p>
+<p>2.内部链接：网站内部页面之间的相互链接，直接链接内部页面即可，也就是在同一个目录文件夹下的网页。</p>
+<p>3.空链接：如果当时没有确定的链接目标时，&lt;a href=”#”&gt;XX&lt;/a&gt;。   </p>
+<p>4.下载链接：如果href里面的地址是一个文件或者压缩包，会下载这个文件，地址的链接是 文件.exe 或者是zip等压缩包形式。 </p>
+<p>5.网页元素链接：在网页中的网页元素，如文本，图像，表格，音频，视频等可以添加超链接。  </p>
+<p>6.锚点链接：当我们点击链接，可以快速定位到页面中的某个位置。<br>  注：在链接文本的href属性中，设置属性值为**#名字**的 形式，如&lt;a href=”#名字”&gt;XXXX&lt;/a&gt;   </p>
+<p>找到目标位置标签,里面添加一个id属性=刚才的名字，如：&lt;h3 id=名字&gt;XXXX&lt;/h3&gt;    </p>
+<h1 id="5-HTML中的特殊标签"><a href="#5-HTML中的特殊标签" class="headerlink" title="5.HTML中的特殊标签"></a>5.HTML中的特殊标签</h1><h2 id="5-1注释"><a href="#5-1注释" class="headerlink" title="5.1注释"></a>5.1注释</h2><p>如果要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字。就需要HTML的注释：&lt;!–注释语句 –&gt;<br>快捷键  ctrl + /. </p>
+<p>##5.2特殊字符<br>在HTML页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。   </p>
+<p><img src="https://img-blog.csdn.net/20161115203116387" alt="avatar">  </p>
+<p><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/html_ref_entities.html">W3school的特殊字符归类</a>   </p>
+<p>重点为空格，大于号，小于号 其余查阅即可。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://example.com/2021/04/06/HTML1/" data-title="blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2021/04/12/HTML2/" title="">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2021/03/28/函数的存储，调用/"  title="">
+ <strong>NEXT:</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-HTML%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">1.HTML语法规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 基本语法概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E6%A0%87%E7%AD%BE%E5%85%B3%E7%B3%BB"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 标签关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">包含关系：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%88%97%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">并列关系：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-HTML%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="toc-number">2.</span> <span class="toc-text">2.HTML基本结构标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 一个标签</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%BB%A5VSCode%E4%B8%BA%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">3.网页开发工具，以VSCode为例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%A0%87%E7%AD%BE%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">3.1.文档类型声明标签：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-lang%E8%AF%AD%E8%A8%80%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 lang语言标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 字符集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%B3%A8%E6%84%8F"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">4.</span> <span class="toc-text">4.HTML常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%A0%87%E7%AD%BE%E8%AF%AD%E4%B9%89"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 标签语义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE%E5%92%8C%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.</span> <span class="toc-text">4.3段落标签和换行标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.0.1.</span> <span class="toc-text">段落标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">4.2.0.2.</span> <span class="toc-text">换行标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E6%9C%AC%E6%96%87%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">4.3.</span> <span class="toc-text">4.4本文格式化标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-LT-div-gt-%E5%92%8C-LT-span-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">4.4.</span> <span class="toc-text">4.5 &amp;LT;div&gt;和&amp;LT;span&gt;标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE%EF%BC%8C%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.</span> <span class="toc-text">4.6图像标签，路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="toc-number">4.5.1.</span> <span class="toc-text">1.图像标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.</span> <span class="toc-text">2.路径</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.1.</span> <span class="toc-text">相对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">4.5.2.2.</span> <span class="toc-text">绝对路径</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE%EF%BC%81"><span class="toc-number">4.6.</span> <span class="toc-text">4.7 超链接标签！</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">4.6.0.1.</span> <span class="toc-text">超链接的语法规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.6.0.2.</span> <span class="toc-text">链接语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E5%88%86%E7%B1%BB"><span class="toc-number">4.6.0.3.</span> <span class="toc-text">链接分类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-HTML%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">5.</span> <span class="toc-text">5.HTML中的特殊标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E6%B3%A8%E9%87%8A"><span class="toc-number">5.1.</span> <span class="toc-text">5.1注释</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wizicer/iceman" target="_blank" title="Iceman">Iceman</a> © 2021 
+		
+		<a href="http://example.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

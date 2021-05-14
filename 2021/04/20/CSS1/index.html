@@ -1,0 +1,805 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="#1. CSS简介 
+1.1 HTML的局限性它只关心内容的语义，不关心整体页面   
+1.2 CSS 网页美容师CSS是层叠样式表的简称，有时我们也会称为CSS样式表或级联样式表。
+CSS也是一门标记语言  
+CSS主要修饰细节，布局，外观样式，美化html。 
+最大价值，由HTML专注去做结构呈">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="blog" title="blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="blog">blog</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//baidu.com/s" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="wd" autocomplete="off" maxlength="20" placeholder="Search" />
+                        <input name=tn type=hidden value="bds">
+                        <input name=cl type=hidden value="3">
+                        <input name=ct type=hidden value="2097152">
+						<input type="hidden" name="si" value="example.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2021/04/20/CSS1/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://example.com" title="John Doe">John Doe</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2021-04-20T10:21:44.714Z" itemprop="datePublished">2021-04-20</time>
+    
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-HTML%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">1.1 HTML的局限性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-CSS-%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%AE%B9%E5%B8%88"><span class="toc-number">2.</span> <span class="toc-text">1.2 CSS 网页美容师</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-CSS"><span class="toc-number">3.</span> <span class="toc-text">1.3 CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="toc-number">4.</span> <span class="toc-text">1.4 CSS代码风格</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text">注意，有 **.**      
+
+
+不能用标签名做类名，长名词加-来分隔。不要使用纯数字，中文，命名尽量要有意义。尽量使用前端开发规范手册。   
+
+
+类选择器画盒子（div）   
+类选择器的多类名：
+我们可以给一个标签指定多个类名，从而达到更多的选择目的，这些类名都可以选出这个标签。   
+
+
+多类名的使用：在同一个class的引号内，中间记得加上空格。
+
+可以把一些标签元素相同的样式放入一个类里面，这些标签都可以调用这个公共的类，然后再调用自己独有的类。从而节省CSS代码，统一修改也非常方便。
+2.5 id选择器语法：
+#id名&amp;#123;
+        属性1： 属性值1；
+    &amp;#125;  
+id调用只能调用一次，id属性只能在每个HTML文档中出现一次。
+id选择器和类选择器的区别
+
+类选择器好比人的名字，一个人可以有多个名字，同时一个名字也可被多个人使用，id只能对应一个html标签，两个标签的id属性必然不相同，class则不然
+id选择器好比人的身份证，唯一的   
+就是同一个 HTML页面，如果你有两个或以上的html元素的id属性一样，就会有冲突   
+最大区别在使用次数上   
+id选择器一般用于页面唯一性的元素上，经常和js搭配使用     
+2.6 通配符选择器在CSS中，通配符选择器使用*定义，它表示选取页面中所有的标签
+语法：
+* &amp;#123;
+        属性1： 属性值1；
+    &amp;#125;  
+通配符选择器不需要调用，自动就给所有的元素使用样式  
+特殊情况下才使用    
+3.CSS字体属性CSS fonts属性用于定义字体系列，大小，粗细，和文字样式  
+
+3.1字体属性 CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+    
+
+谷歌浏览器默认字体，微软雅黑      
+一般直接给body标签指定CSS字体属性。多个字体指定是注意系统的执行顺序。  
+3.2 CSS字体大小font-size  XXpx
+px像素大小是网页的最常用的单位  
+谷歌浏览器默认的文字大小为px  
+不同浏览器的默认文字大小可能不一样  
+为了方便直接给body标签设置CSS样式  
+一般标题需要单独指定文字大小    
+3.3 字体粗细CSS使用font-weight属性设置文字粗细   属性过多直接去查找CSS手册去查找属性       
+注：  700&#x3D;bold  normal&#x3D;400（只变大小不改粗细）不加PX
+实际开发中更提倡数字  
+学会让加粗标签不加粗   
+3.4 文字样式  （style）normal  ：默认值，显示正常字体，  让倾斜的不倾斜，如结合em标签使用 
+italic：斜体   
+3.5 字体复合属性 h2 &amp;#123;
+                    font: font-style font-weight font-size&#x2F;line-heigh font-family;
+
+            &amp;#125;  
+必须按照这个顺序写，中间用空格分隔  
+不需要的属性可以省略，但是size和family必须有   
+4.CSS文本属性文本属性定义文本的外观，如颜色，对齐文本，装饰文本，文本缩进，行间距等  
+color用于定义文本的颜色    
+表示方法：预定义的颜色值，如：red，十六进制，如：#FF000,以及RGB代码，最常用的是十六进制 。  
+##4.2 对齐文本 
+text-align：水平对齐，有居中，center left（左对齐） right（右对齐）     
+4.3装饰文本text-decoration属性规定添加到文本的修饰，给文本添加下划线，删除线，上划线等。
+none：默认，没有装饰线，取消简介自带的下划线  
+
+underline: 下划线，链接a自带下划线  
+
+overline: 上划线 
+
+line-through: 删除线  
+
+重点了解如何添加下划线，以及如何删除下划线  
+
+4.4文本缩进text-indent属性用于指定段落缩进  
+单位：PX（像素） em（相对单位，就是当前元素一个文字的大小，如果当前元素没有设置大小，会按照父元素的一个文字大小。）（当前元素一个文字大小的单位）   
+单位可以取负值，表现为突出。  
+4.5 行间距line-height属性用于设置行间的距离（行高）可以控制文字行与行之间的距离。单位px。
+行间距包括：上间距，文本高度，下间距，三个部分。  
+改变行间距真正改变的是上下行间距（文字大小不变的情况下）  
+多出来的行间距（设置的减去文字大小）评分给上下行间距  
+多行文本算行间距：第一行最下方算到第二行最下方    
+5.CSS引入方式按照CSS样式书写的位置（或引入的方式），CSS样式表可以分为三大类：
+1.行内样式表（行内式） 2.内部样式表（嵌入式）  3.外部样式表（链接式）  
+##5.1 内部样式表  
+内部样式表或者说是内嵌样式表是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中  理论上  style标签可以放到任何地方，但一般放到head中，练习中常用。  
+控制范围是整个页面，
+但是CSS与HTML没有完全分离。  
+##5.2 行内样式表 （内联样式表） 
+行内样式表是在元素标签内部style属性中设置CSS样式，适合于简单修改样式。   
+1.只控制当前标签  
+2.并没有实现结构与样式相分离  
+3.双引号中间要符合CSS规范  
+4.通常也称为行内式引入   
+5.只适用于修改样式少的情况下。  
+##5.3外部样式表
+实际开发中一般都是外部样式表 ，适用于样式比较多的情况，核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中适用。  
+引入外部样式表分两步 ：
+1.新建一个后缀为CSS样式文件，把所有CSS代码都放入此文件中。  
+2.在HTML页面中，，适用标签引入这个文件  
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css文件路径&quot;&gt;  
+6.Chrome调试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">0.0.1.</span> <span class="toc-text">不能用标签名做类名，长名词加-来分隔。不要使用纯数字，中文，命名尽量要有意义。尽量使用前端开发规范手册。   
+
+
+类选择器画盒子（div）   
+类选择器的多类名：
+我们可以给一个标签指定多个类名，从而达到更多的选择目的，这些类名都可以选出这个标签。   
+</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">0.0.1.1.</span> <span class="toc-text">多类名的使用：在同一个class的引号内，中间记得加上空格。
+
+可以把一些标签元素相同的样式放入一个类里面，这些标签都可以调用这个公共的类，然后再调用自己独有的类。从而节省CSS代码，统一修改也非常方便。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">2.5 id选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">id选择器和类选择器的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">2.6 通配符选择器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-CSS%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number"></span> <span class="toc-text">3.CSS字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">0.0.0.1.</span> <span class="toc-text">CSS fonts属性用于定义字体系列，大小，粗细，和文字样式  
+
+3.1字体属性 CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+    
+
+谷歌浏览器默认字体，微软雅黑      
+一般直接给body标签指定CSS字体属性。多个字体指定是注意系统的执行顺序。  
+3.2 CSS字体大小font-size  XXpx
+px像素大小是网页的最常用的单位  
+谷歌浏览器默认的文字大小为px  
+不同浏览器的默认文字大小可能不一样  
+为了方便直接给body标签设置CSS样式  
+一般标题需要单独指定文字大小    
+3.3 字体粗细CSS使用font-weight属性设置文字粗细   属性过多直接去查找CSS手册去查找属性       
+注：  700&#x3D;bold  normal&#x3D;400（只变大小不改粗细）不加PX
+实际开发中更提倡数字  
+学会让加粗标签不加粗   
+3.4 文字样式  （style）normal  ：默认值，显示正常字体，  让倾斜的不倾斜，如结合em标签使用 
+italic：斜体   
+3.5 字体复合属性 h2 &amp;#123;
+                    font: font-style font-weight font-size&#x2F;line-heigh font-family;
+
+            &amp;#125;  
+必须按照这个顺序写，中间用空格分隔  
+不需要的属性可以省略，但是size和family必须有   
+4.CSS文本属性文本属性定义文本的外观，如颜色，对齐文本，装饰文本，文本缩进，行间距等  
+color用于定义文本的颜色    
+表示方法：预定义的颜色值，如：red，十六进制，如：#FF000,以及RGB代码，最常用的是十六进制 。  
+##4.2 对齐文本 
+text-align：水平对齐，有居中，center left（左对齐） right（右对齐）     
+4.3装饰文本text-decoration属性规定添加到文本的修饰，给文本添加下划线，删除线，上划线等。
+none：默认，没有装饰线，取消简介自带的下划线  
+
+underline: 下划线，链接a自带下划线  
+
+overline: 上划线 
+
+line-through: 删除线  
+
+重点了解如何添加下划线，以及如何删除下划线  
+
+4.4文本缩进text-indent属性用于指定段落缩进  
+单位：PX（像素） em（相对单位，就是当前元素一个文字的大小，如果当前元素没有设置大小，会按照父元素的一个文字大小。）（当前元素一个文字大小的单位）   
+单位可以取负值，表现为突出。  
+4.5 行间距line-height属性用于设置行间的距离（行高）可以控制文字行与行之间的距离。单位px。
+行间距包括：上间距，文本高度，下间距，三个部分。  
+改变行间距真正改变的是上下行间距（文字大小不变的情况下）  
+多出来的行间距（设置的减去文字大小）评分给上下行间距  
+多行文本算行间距：第一行最下方算到第二行最下方    
+5.CSS引入方式按照CSS样式书写的位置（或引入的方式），CSS样式表可以分为三大类：
+1.行内样式表（行内式） 2.内部样式表（嵌入式）  3.外部样式表（链接式）  
+##5.1 内部样式表  
+内部样式表或者说是内嵌样式表是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中  理论上  style标签可以放到任何地方，但一般放到head中，练习中常用。  
+控制范围是整个页面，
+但是CSS与HTML没有完全分离。  
+##5.2 行内样式表 （内联样式表） 
+行内样式表是在元素标签内部style属性中设置CSS样式，适合于简单修改样式。   
+1.只控制当前标签  
+2.并没有实现结构与样式相分离  
+3.双引号中间要符合CSS规范  
+4.通常也称为行内式引入   
+5.只适用于修改样式少的情况下。  
+##5.3外部样式表
+实际开发中一般都是外部样式表 ，适用于样式比较多的情况，核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中适用。  
+引入外部样式表分两步 ：
+1.新建一个后缀为CSS样式文件，把所有CSS代码都放入此文件中。  
+2.在HTML页面中，，适用标签引入这个文件  
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css文件路径&quot;&gt;  
+6.Chrome调试工具</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">3.1字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-CSS%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.</span> <span class="toc-text">3.2 CSS字体大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86"><span class="toc-number">3.</span> <span class="toc-text">3.3 字体粗细</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F-%EF%BC%88style%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">3.4 文字样式  （style）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E5%AD%97%E4%BD%93%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">3.5 字体复合属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-number"></span> <span class="toc-text">4.CSS文本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">4.3装饰文本</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">none：默认，没有装饰线，取消简介自带的下划线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">underline: 下划线，链接a自带下划线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">overline: 上划线 </span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">line-through: 删除线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">重点了解如何添加下划线，以及如何删除下划线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="toc-number">2.</span> <span class="toc-text">4.4文本缩进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="toc-number">3.</span> <span class="toc-text">4.5 行间距</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">5.CSS引入方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Chrome%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number"></span> <span class="toc-text">6.Chrome调试工具</span></a>
+		</div>
+		
+		<p>#1. CSS简介 </p>
+<h2 id="1-1-HTML的局限性"><a href="#1-1-HTML的局限性" class="headerlink" title="1.1 HTML的局限性"></a>1.1 HTML的局限性</h2><p>它只关心内容的语义，不关心整体页面   </p>
+<h2 id="1-2-CSS-网页美容师"><a href="#1-2-CSS-网页美容师" class="headerlink" title="1.2 CSS 网页美容师"></a>1.2 CSS 网页美容师</h2><p>CSS是层叠样式表的简称，有时我们也会称为CSS样式表或级联样式表。</p>
+<p>CSS也是一门标记语言  </p>
+<p>CSS主要修饰细节，布局，外观样式，美化html。 </p>
+<p><strong>最大价值，由HTML专注去做结构呈现，样式交给CSS，即结构（HTML）与样式（CSS）相分离</strong>  </p>
+<h2 id="1-3-CSS"><a href="#1-3-CSS" class="headerlink" title="1.3 CSS"></a>1.3 CSS</h2><p>css规则由两个主要的部分构成，选择器以及一条或<strong>多条声明</strong>。  </p>
+<p>给谁改样式{改什么样式}</p>
+<p>选择器是用于指定CSS样式的HTML标签，花括号内是该对象设置的具体样式。  </p>
+<p>属性和属性值以”键值对”的形式出现</p>
+<p>注意结尾要加分号   </p>
+<h2 id="1-4-CSS代码风格"><a href="#1-4-CSS代码风格" class="headerlink" title="1.4 CSS代码风格"></a>1.4 CSS代码风格</h2><p>###1.4.1 代码风格  </p>
+<pre><code>h3 &#123; color: XXXXXX;font-size: 20px&#125;</code></pre>
+<p>称为紧凑格式   </p>
+<pre><code>h3 &#123;
+     color: XXX;
+     font-size: 20px;
+    &#125;</code></pre>
+<p>###1.4.2 样式大小写   </p>
+<p>大小写都能执行，但是一般为小写   </p>
+<p>###1.4.3 空格  </p>
+<p>1.属性值前，，冒号后，加一个空格。</p>
+<p>2.选择器和大括号中间保留一个空格。  </p>
+<p>#2.CSS基础选择器</p>
+<p>##2.1 CSS选择器的作用</p>
+<p>选择器或者选择符就是根据不同需求把不同的标签选出来。</p>
+<p>##2.2 选择器分类</p>
+<p>选择器分为<strong>基础选择器</strong>和<strong>复合选择器</strong>两个大类。   </p>
+<p>基础选择器是由单个选择器组成的。  </p>
+<p>基础选择器又包括：标签选择器，类选择器，id选择器和通配符选择器。   </p>
+<p>##2.3 标签选择器<br>标签选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定同统一的CSS样式。  </p>
+<p>它能够将所有的标签选择出来。</p>
+<p>快速，但不能差异化设置。 </p>
+<p>##2.4 类选择器<br>类选择器能够实现差异化选择。  </p>
+<p>要用到class属性实现差异化选择。  class可选择一个或多个标签。</p>
+<p>语法：<br>    .class {<br>            属性值： 属性值1<br>        …..<br>        }</p>
+<h1>注意，有 **.**      
+
+
+<h4>不能用标签名做类名，长名词加-来分隔。不要使用纯数字，中文，命名尽量要有意义。尽量使用前端开发规范手册。   
+
+
+<p>类选择器画盒子（div）   </p>
+<p>类选择器的多类名：<br>我们可以给一个标签指定多个类名，从而达到更多的选择目的，这些类名都可以选出这个标签。   </p>
+</h4>
+
+<h5>多类名的使用：在同一个class的引号内，中间记得加上空格。
+
+<p>可以把一些标签元素相同的样式放入一个类里面，这些标签都可以调用这个公共的类，然后再调用自己独有的类。从而节省CSS代码，统一修改也非常方便。</h5></p>
+<h2 id="2-5-id选择器"><a href="#2-5-id选择器" class="headerlink" title="2.5 id选择器"></a>2.5 id选择器</h2><p>语法：</p>
+<pre><code>#id名&#123;
+        属性1： 属性值1；
+    &#125;  </code></pre>
+<p>id调用只能调用一次，id属性只能在每个HTML文档中出现一次。</p>
+<h4>id选择器和类选择器的区别</h4>
+
+<p>类选择器好比人的名字，一个人可以有多个名字，同时一个名字也可被多个人使用，id只能对应一个html标签，两个标签的id属性必然不相同，class则不然</p>
+<p>id选择器好比人的身份证，唯一的   </p>
+<p>就是同一个 HTML页面，如果你有两个或以上的html元素的id属性一样，就会有冲突   </p>
+<p>最大区别在使用次数上   </p>
+<p>id选择器一般用于页面唯一性的元素上，经常和js搭配使用     </p>
+<h2 id="2-6-通配符选择器"><a href="#2-6-通配符选择器" class="headerlink" title="2.6 通配符选择器"></a>2.6 通配符选择器</h2><p>在CSS中，通配符选择器使用*定义，它表示选取页面中所有的标签<br>语法：</p>
+<pre><code>* &#123;
+        属性1： 属性值1；
+    &#125;  </code></pre>
+<p>通配符选择器不需要调用，自动就给所有的元素使用样式  </p>
+<p>特殊情况下才使用    </p>
+<h1 id="3-CSS字体属性"><a href="#3-CSS字体属性" class="headerlink" title="3.CSS字体属性"></a>3.CSS字体属性</h1><h5>CSS fonts属性用于定义字体系列，大小，粗细，和文字样式  
+
+<h2 id="3-1字体属性"><a href="#3-1字体属性" class="headerlink" title="3.1字体属性"></a>3.1字体属性</h2> <h5>CSS使用font-family属性定义文本的字体系列    
+
+<p>各个字体之间用英文状态下的逗号隔开</p>
+<p>一般情况下，如果有空格隔开的多个单词组成的字体，加引号  </p>
+<p>尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示</p>
+</h5>    
+
+<p>谷歌浏览器默认字体，微软雅黑      </p>
+<p>一般直接给body标签指定CSS字体属性。多个字体指定是注意系统的执行顺序。  </p>
+<h2 id="3-2-CSS字体大小"><a href="#3-2-CSS字体大小" class="headerlink" title="3.2 CSS字体大小"></a>3.2 CSS字体大小</h2><p>font-size  XXpx</p>
+<p>px像素大小是网页的最常用的单位  </p>
+<p>谷歌浏览器默认的文字大小为px  </p>
+<p>不同浏览器的默认文字大小可能不一样  </p>
+<p>为了方便直接给body标签设置CSS样式  </p>
+<p>一般标题需要单独指定文字大小    </p>
+<h2 id="3-3-字体粗细"><a href="#3-3-字体粗细" class="headerlink" title="3.3 字体粗细"></a>3.3 字体粗细</h2><p>CSS使用font-weight属性设置文字粗细   属性过多直接去查找CSS手册去查找属性       </p>
+<p>注：  700=bold  normal=400（只变大小不改粗细）不加PX<br>实际开发中更提倡数字  </p>
+<p>学会让加粗标签不加粗   </p>
+<h2 id="3-4-文字样式-（style）"><a href="#3-4-文字样式-（style）" class="headerlink" title="3.4 文字样式  （style）"></a>3.4 文字样式  （style）</h2><p>normal  ：默认值，显示正常字体，  让倾斜的不倾斜，如结合em标签使用 </p>
+<p>italic：斜体   </p>
+<h2 id="3-5-字体复合属性"><a href="#3-5-字体复合属性" class="headerlink" title="3.5 字体复合属性"></a>3.5 字体复合属性</h2><pre><code> h2 &#123;
+                    font: font-style font-weight font-size/line-heigh font-family;
+
+            &#125;  </code></pre>
+<p>必须按照这个顺序写，中间用空格分隔  </p>
+<p>不需要的属性可以省略，但是size和family必须有   </p>
+<h1 id="4-CSS文本属性"><a href="#4-CSS文本属性" class="headerlink" title="4.CSS文本属性"></a>4.CSS文本属性</h1><p>文本属性定义文本的外观，如颜色，对齐文本，装饰文本，文本缩进，行间距等  </p>
+<p>color用于定义文本的颜色    </p>
+<p>表示方法：预定义的颜色值，如：red，十六进制，如：#FF000,以及RGB代码，最常用的是十六进制 。  </p>
+<p>##4.2 对齐文本 </p>
+<p>text-align：水平对齐，有居中，center left（左对齐） right（右对齐）     </p>
+<h2 id="4-3装饰文本"><a href="#4-3装饰文本" class="headerlink" title="4.3装饰文本"></a>4.3装饰文本</h2><p>text-decoration属性规定添加到文本的修饰，给文本添加下划线，删除线，上划线等。</p>
+<h5>none：默认，没有装饰线，取消简介自带的下划线</h5>  
+
+<h5>underline: 下划线，链接a自带下划线</h5>  
+
+<h5>overline: 上划线 </h5>
+
+<h5>line-through: 删除线</h5>  
+
+<h3>重点了解如何添加下划线，以及如何删除下划线</h3>  
+
+<h2 id="4-4文本缩进"><a href="#4-4文本缩进" class="headerlink" title="4.4文本缩进"></a>4.4文本缩进</h2><p>text-indent属性用于指定段落缩进  </p>
+<p>单位：PX（像素） em（相对单位，就是当前元素一个文字的大小，如果当前元素没有设置大小，会按照父元素的一个文字大小。）（当前元素一个文字大小的单位）   </p>
+<p>单位可以取负值，表现为突出。  </p>
+<h2 id="4-5-行间距"><a href="#4-5-行间距" class="headerlink" title="4.5 行间距"></a>4.5 行间距</h2><p>line-height属性用于设置行间的距离（行高）可以控制文字行与行之间的距离。单位px。</p>
+<p>行间距包括：上间距，文本高度，下间距，三个部分。  </p>
+<p>改变行间距真正改变的是上下行间距（文字大小不变的情况下）  </p>
+<p>多出来的行间距（设置的减去文字大小）评分给上下行间距  </p>
+<p>多行文本算行间距：第一行最下方算到第二行最下方    </p>
+<h1 id="5-CSS引入方式"><a href="#5-CSS引入方式" class="headerlink" title="5.CSS引入方式"></a>5.CSS引入方式</h1><p>按照CSS样式书写的位置（或引入的方式），CSS样式表可以分为三大类：</p>
+<p>1.行内样式表（行内式） 2.内部样式表（嵌入式）  3.外部样式表（链接式）  </p>
+<p>##5.1 内部样式表  </p>
+<p>内部样式表或者说是内嵌样式表是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中  理论上  style标签可以放到任何地方，但一般放到head中，练习中常用。  </p>
+<p>控制范围是整个页面，</p>
+<p>但是CSS与HTML没有完全分离。  </p>
+<p>##5.2 行内样式表 （内联样式表） </p>
+<p>行内样式表是在元素标签内部style属性中设置CSS样式，<strong>适合于简单修改样式。</strong>   </p>
+<p>1.只控制当前标签  </p>
+<p>2.并没有实现结构与样式相分离  </p>
+<p>3.双引号中间要符合CSS规范  </p>
+<p>4.通常也称为行内式引入   </p>
+<p>5.只适用于修改样式少的情况下。  </p>
+<p>##5.3外部样式表<br>实际开发中一般都是外部样式表 ，适用于样式比较多的情况，核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中适用。  </p>
+<p>引入外部样式表分两步 ：</p>
+<p>1.新建一个后缀为CSS样式文件，把所有CSS代码都放入此文件中。  </p>
+<p>2.在HTML页面中，，适用<link>标签引入这个文件  </p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css文件路径&quot;&gt;  </code></pre>
+<h1 id="6-Chrome调试工具"><a href="#6-Chrome调试工具" class="headerlink" title="6.Chrome调试工具"></a>6.Chrome调试工具</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://example.com/2021/04/20/CSS1/" data-title="blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2021/04/12/HTML2/"  title="">
+ <strong>NEXT:</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-HTML%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">1.1 HTML的局限性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-CSS-%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%AE%B9%E5%B8%88"><span class="toc-number">2.</span> <span class="toc-text">1.2 CSS 网页美容师</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-CSS"><span class="toc-number">3.</span> <span class="toc-text">1.3 CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="toc-number">4.</span> <span class="toc-text">1.4 CSS代码风格</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text">注意，有 **.**      
+
+
+不能用标签名做类名，长名词加-来分隔。不要使用纯数字，中文，命名尽量要有意义。尽量使用前端开发规范手册。   
+
+
+类选择器画盒子（div）   
+类选择器的多类名：
+我们可以给一个标签指定多个类名，从而达到更多的选择目的，这些类名都可以选出这个标签。   
+
+
+多类名的使用：在同一个class的引号内，中间记得加上空格。
+
+可以把一些标签元素相同的样式放入一个类里面，这些标签都可以调用这个公共的类，然后再调用自己独有的类。从而节省CSS代码，统一修改也非常方便。
+2.5 id选择器语法：
+#id名&amp;#123;
+        属性1： 属性值1；
+    &amp;#125;  
+id调用只能调用一次，id属性只能在每个HTML文档中出现一次。
+id选择器和类选择器的区别
+
+类选择器好比人的名字，一个人可以有多个名字，同时一个名字也可被多个人使用，id只能对应一个html标签，两个标签的id属性必然不相同，class则不然
+id选择器好比人的身份证，唯一的   
+就是同一个 HTML页面，如果你有两个或以上的html元素的id属性一样，就会有冲突   
+最大区别在使用次数上   
+id选择器一般用于页面唯一性的元素上，经常和js搭配使用     
+2.6 通配符选择器在CSS中，通配符选择器使用*定义，它表示选取页面中所有的标签
+语法：
+* &amp;#123;
+        属性1： 属性值1；
+    &amp;#125;  
+通配符选择器不需要调用，自动就给所有的元素使用样式  
+特殊情况下才使用    
+3.CSS字体属性CSS fonts属性用于定义字体系列，大小，粗细，和文字样式  
+
+3.1字体属性 CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+    
+
+谷歌浏览器默认字体，微软雅黑      
+一般直接给body标签指定CSS字体属性。多个字体指定是注意系统的执行顺序。  
+3.2 CSS字体大小font-size  XXpx
+px像素大小是网页的最常用的单位  
+谷歌浏览器默认的文字大小为px  
+不同浏览器的默认文字大小可能不一样  
+为了方便直接给body标签设置CSS样式  
+一般标题需要单独指定文字大小    
+3.3 字体粗细CSS使用font-weight属性设置文字粗细   属性过多直接去查找CSS手册去查找属性       
+注：  700&#x3D;bold  normal&#x3D;400（只变大小不改粗细）不加PX
+实际开发中更提倡数字  
+学会让加粗标签不加粗   
+3.4 文字样式  （style）normal  ：默认值，显示正常字体，  让倾斜的不倾斜，如结合em标签使用 
+italic：斜体   
+3.5 字体复合属性 h2 &amp;#123;
+                    font: font-style font-weight font-size&#x2F;line-heigh font-family;
+
+            &amp;#125;  
+必须按照这个顺序写，中间用空格分隔  
+不需要的属性可以省略，但是size和family必须有   
+4.CSS文本属性文本属性定义文本的外观，如颜色，对齐文本，装饰文本，文本缩进，行间距等  
+color用于定义文本的颜色    
+表示方法：预定义的颜色值，如：red，十六进制，如：#FF000,以及RGB代码，最常用的是十六进制 。  
+##4.2 对齐文本 
+text-align：水平对齐，有居中，center left（左对齐） right（右对齐）     
+4.3装饰文本text-decoration属性规定添加到文本的修饰，给文本添加下划线，删除线，上划线等。
+none：默认，没有装饰线，取消简介自带的下划线  
+
+underline: 下划线，链接a自带下划线  
+
+overline: 上划线 
+
+line-through: 删除线  
+
+重点了解如何添加下划线，以及如何删除下划线  
+
+4.4文本缩进text-indent属性用于指定段落缩进  
+单位：PX（像素） em（相对单位，就是当前元素一个文字的大小，如果当前元素没有设置大小，会按照父元素的一个文字大小。）（当前元素一个文字大小的单位）   
+单位可以取负值，表现为突出。  
+4.5 行间距line-height属性用于设置行间的距离（行高）可以控制文字行与行之间的距离。单位px。
+行间距包括：上间距，文本高度，下间距，三个部分。  
+改变行间距真正改变的是上下行间距（文字大小不变的情况下）  
+多出来的行间距（设置的减去文字大小）评分给上下行间距  
+多行文本算行间距：第一行最下方算到第二行最下方    
+5.CSS引入方式按照CSS样式书写的位置（或引入的方式），CSS样式表可以分为三大类：
+1.行内样式表（行内式） 2.内部样式表（嵌入式）  3.外部样式表（链接式）  
+##5.1 内部样式表  
+内部样式表或者说是内嵌样式表是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中  理论上  style标签可以放到任何地方，但一般放到head中，练习中常用。  
+控制范围是整个页面，
+但是CSS与HTML没有完全分离。  
+##5.2 行内样式表 （内联样式表） 
+行内样式表是在元素标签内部style属性中设置CSS样式，适合于简单修改样式。   
+1.只控制当前标签  
+2.并没有实现结构与样式相分离  
+3.双引号中间要符合CSS规范  
+4.通常也称为行内式引入   
+5.只适用于修改样式少的情况下。  
+##5.3外部样式表
+实际开发中一般都是外部样式表 ，适用于样式比较多的情况，核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中适用。  
+引入外部样式表分两步 ：
+1.新建一个后缀为CSS样式文件，把所有CSS代码都放入此文件中。  
+2.在HTML页面中，，适用标签引入这个文件  
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css文件路径&quot;&gt;  
+6.Chrome调试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">0.0.1.</span> <span class="toc-text">不能用标签名做类名，长名词加-来分隔。不要使用纯数字，中文，命名尽量要有意义。尽量使用前端开发规范手册。   
+
+
+类选择器画盒子（div）   
+类选择器的多类名：
+我们可以给一个标签指定多个类名，从而达到更多的选择目的，这些类名都可以选出这个标签。   
+</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">0.0.1.1.</span> <span class="toc-text">多类名的使用：在同一个class的引号内，中间记得加上空格。
+
+可以把一些标签元素相同的样式放入一个类里面，这些标签都可以调用这个公共的类，然后再调用自己独有的类。从而节省CSS代码，统一修改也非常方便。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">2.5 id选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">id选择器和类选择器的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">2.6 通配符选择器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-CSS%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number"></span> <span class="toc-text">3.CSS字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">0.0.0.1.</span> <span class="toc-text">CSS fonts属性用于定义字体系列，大小，粗细，和文字样式  
+
+3.1字体属性 CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+    
+
+谷歌浏览器默认字体，微软雅黑      
+一般直接给body标签指定CSS字体属性。多个字体指定是注意系统的执行顺序。  
+3.2 CSS字体大小font-size  XXpx
+px像素大小是网页的最常用的单位  
+谷歌浏览器默认的文字大小为px  
+不同浏览器的默认文字大小可能不一样  
+为了方便直接给body标签设置CSS样式  
+一般标题需要单独指定文字大小    
+3.3 字体粗细CSS使用font-weight属性设置文字粗细   属性过多直接去查找CSS手册去查找属性       
+注：  700&#x3D;bold  normal&#x3D;400（只变大小不改粗细）不加PX
+实际开发中更提倡数字  
+学会让加粗标签不加粗   
+3.4 文字样式  （style）normal  ：默认值，显示正常字体，  让倾斜的不倾斜，如结合em标签使用 
+italic：斜体   
+3.5 字体复合属性 h2 &amp;#123;
+                    font: font-style font-weight font-size&#x2F;line-heigh font-family;
+
+            &amp;#125;  
+必须按照这个顺序写，中间用空格分隔  
+不需要的属性可以省略，但是size和family必须有   
+4.CSS文本属性文本属性定义文本的外观，如颜色，对齐文本，装饰文本，文本缩进，行间距等  
+color用于定义文本的颜色    
+表示方法：预定义的颜色值，如：red，十六进制，如：#FF000,以及RGB代码，最常用的是十六进制 。  
+##4.2 对齐文本 
+text-align：水平对齐，有居中，center left（左对齐） right（右对齐）     
+4.3装饰文本text-decoration属性规定添加到文本的修饰，给文本添加下划线，删除线，上划线等。
+none：默认，没有装饰线，取消简介自带的下划线  
+
+underline: 下划线，链接a自带下划线  
+
+overline: 上划线 
+
+line-through: 删除线  
+
+重点了解如何添加下划线，以及如何删除下划线  
+
+4.4文本缩进text-indent属性用于指定段落缩进  
+单位：PX（像素） em（相对单位，就是当前元素一个文字的大小，如果当前元素没有设置大小，会按照父元素的一个文字大小。）（当前元素一个文字大小的单位）   
+单位可以取负值，表现为突出。  
+4.5 行间距line-height属性用于设置行间的距离（行高）可以控制文字行与行之间的距离。单位px。
+行间距包括：上间距，文本高度，下间距，三个部分。  
+改变行间距真正改变的是上下行间距（文字大小不变的情况下）  
+多出来的行间距（设置的减去文字大小）评分给上下行间距  
+多行文本算行间距：第一行最下方算到第二行最下方    
+5.CSS引入方式按照CSS样式书写的位置（或引入的方式），CSS样式表可以分为三大类：
+1.行内样式表（行内式） 2.内部样式表（嵌入式）  3.外部样式表（链接式）  
+##5.1 内部样式表  
+内部样式表或者说是内嵌样式表是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中  理论上  style标签可以放到任何地方，但一般放到head中，练习中常用。  
+控制范围是整个页面，
+但是CSS与HTML没有完全分离。  
+##5.2 行内样式表 （内联样式表） 
+行内样式表是在元素标签内部style属性中设置CSS样式，适合于简单修改样式。   
+1.只控制当前标签  
+2.并没有实现结构与样式相分离  
+3.双引号中间要符合CSS规范  
+4.通常也称为行内式引入   
+5.只适用于修改样式少的情况下。  
+##5.3外部样式表
+实际开发中一般都是外部样式表 ，适用于样式比较多的情况，核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中适用。  
+引入外部样式表分两步 ：
+1.新建一个后缀为CSS样式文件，把所有CSS代码都放入此文件中。  
+2.在HTML页面中，，适用标签引入这个文件  
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;css文件路径&quot;&gt;  
+6.Chrome调试工具</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">3.1字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">CSS使用font-family属性定义文本的字体系列    
+
+各个字体之间用英文状态下的逗号隔开
+一般情况下，如果有空格隔开的多个单词组成的字体，加引号  
+尽量使用系统默认自带字体，保证在用户的浏览器中都能正常显示
+</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-CSS%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.</span> <span class="toc-text">3.2 CSS字体大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86"><span class="toc-number">3.</span> <span class="toc-text">3.3 字体粗细</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F-%EF%BC%88style%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">3.4 文字样式  （style）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E5%AD%97%E4%BD%93%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">3.5 字体复合属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-number"></span> <span class="toc-text">4.CSS文本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E8%A3%85%E9%A5%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">4.3装饰文本</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">none：默认，没有装饰线，取消简介自带的下划线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">underline: 下划线，链接a自带下划线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">overline: 上划线 </span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">line-through: 删除线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">重点了解如何添加下划线，以及如何删除下划线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9B"><span class="toc-number">2.</span> <span class="toc-text">4.4文本缩进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E8%A1%8C%E9%97%B4%E8%B7%9D"><span class="toc-number">3.</span> <span class="toc-text">4.5 行间距</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">5.CSS引入方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Chrome%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number"></span> <span class="toc-text">6.Chrome调试工具</span></a>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wizicer/iceman" target="_blank" title="Iceman">Iceman</a> © 2021 
+		
+		<a href="http://example.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
